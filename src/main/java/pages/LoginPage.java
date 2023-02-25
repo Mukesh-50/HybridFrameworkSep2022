@@ -18,7 +18,7 @@ public class LoginPage {
 	
 	By login=By.xpath("//button[normalize-space()='Sign in']");
 	
-	By loginHeader=By.xpath("//h2[normalize-space()='Sign In']");
+	By loginHeader=By.xpath("//button[@type='submit']");
 	
 	public void loginToApplication(String username,String password)
 	{
