@@ -3,9 +3,7 @@
 <suite name="Suite">
 
 <listeners>
-	
 	<listener class-name="listeners.ExtentTestNGITestListener"></listener>
-
 </listeners>
 
   <test thread-count="5" name="Test">
