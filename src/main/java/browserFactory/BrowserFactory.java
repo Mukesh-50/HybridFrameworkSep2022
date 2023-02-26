@@ -3,6 +3,7 @@ package browserFactory;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -24,7 +25,10 @@ public class BrowserFactory {
 		
 		if(browserName.contains("Chrome") || browserName.contains("GC") || browserName.contains("Google Chrome"))
 		{
-			driver=new ChromeDriver();
+			ChromeOptions opt=new ChromeOptions();
+			opt.addArguments("--headless");
+			opt.addArguments("--no-sandbox");
+			driver=new ChromeDriver(opt);
 		}
 		else if(browserName.contains("Firefox"))
 		{
