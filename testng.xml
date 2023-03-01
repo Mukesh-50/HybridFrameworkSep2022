@@ -2,13 +2,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
-<listeners>
-	<listener class-name="listeners.ExtentTestNGITestListener"></listener>
-</listeners>
-
-  <test thread-count="5" name="Test">
+  <test thread-count="1" name="Test">
     <classes>
-      <class name="testcases.LoginTest"/>
+      <class name="testcases.Assignment14"/>
     </classes>
   </test> 
 </suite> 
