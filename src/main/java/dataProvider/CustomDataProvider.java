@@ -11,4 +11,11 @@ public class CustomDataProvider {
 		return arr;
 	}
 
+	@DataProvider(name = "creatCourseDetails")
+	public static Object[][] getCreateCourseData()
+	{
+		Object[][] arr = ExcelReader.getDataFromSheet("createCourse");
+		return arr;
+	}
+
 }

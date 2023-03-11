@@ -13,8 +13,9 @@ import dataProvider.ConfigReader;
 public class BaseClass  {
 
 	public WebDriver driver;
+
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setupBrowser()
 	{
 		System.out.println("LOG:INFO - Setting up browser");
@@ -26,13 +27,13 @@ public class BaseClass  {
 	
 	}
 	
-	// @AfterClass
-	// public void closeBrowser()
-	// {
-	// 	driver.quit();
+	@AfterClass
+	public void closeBrowser()
+	{
+		//driver.quit();
 		
-	// 	System.out.println("LOG:INFO - Closing the browser and application");
-	// }
+		System.out.println("LOG:INFO - Closing the browser and application");
+	}
 	
 	@BeforeSuite
 	public void setupDB()

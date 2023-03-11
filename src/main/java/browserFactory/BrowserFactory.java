@@ -25,6 +25,7 @@ public class BrowserFactory {
 		if(browserName.contains("Chrome") || browserName.contains("GC") || browserName.contains("Google Chrome"))
 		{
 			driver=new ChromeDriver();
+			driver.manage().deleteAllCookies();
 		}
 		else if(browserName.contains("Firefox"))
 		{

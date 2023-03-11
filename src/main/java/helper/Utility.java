@@ -8,6 +8,7 @@ import java.util.Date;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -196,6 +197,19 @@ public class Utility {
 		 * 	Implement this for screenshot of WebElement
 		 * 
 		 */
+	}
+
+	public static void javaScriptClick(WebDriver driver, WebElement element){
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", element);
+
+	}
+
+	public static void clearTextField(WebElement element){
+		while(!element.getText().isEmpty()){
+			element.sendKeys(Keys.BACK_SPACE);
+		}
+
 	}
 	
 	
