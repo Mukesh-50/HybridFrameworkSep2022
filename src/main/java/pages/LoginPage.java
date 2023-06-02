@@ -25,6 +25,7 @@ public class LoginPage {
 		driver.findElement(user).sendKeys(username);
 		driver.findElement(pass).sendKeys(password);
 		driver.findElement(login).click();
+		System.out.println("Login to application method");
 		
 	}
 	
