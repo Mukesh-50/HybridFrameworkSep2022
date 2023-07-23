@@ -14,7 +14,7 @@ public class HomePage {
 	
 	By signOut=By.xpath("//button[normalize-space()='Sign out']");
 	
-	By welcomeMsg=By.xpath("//h4");
+	By welcomeMsg=By.xpath("//h2[contains(text(),'Java Selenium')]");
 	
 	public void clickOnSignOut()
 	{
@@ -23,7 +23,7 @@ public class HomePage {
 	
 	public String getWelcomeMsg()
 	{
-		return driver.findElement(welcomeMsg).getText();
+		return driver.findElement(signOut).getText();
 	}
 	
 	
