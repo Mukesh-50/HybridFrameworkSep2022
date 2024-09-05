@@ -8,8 +8,9 @@
     <classes>
       <class name="testcases.LoginTest">
         <methods>
-          <include name="loginToApplication" invocation-numbers="0 1"/>
+          <include name="loginToApplication" invocation-numbers="0"/>
           <include name="setupBrowser"/>
+          <include name="setupDB"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- testcases.LoginTest -->

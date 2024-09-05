@@ -12,7 +12,7 @@ public class LoginTest extends BaseClass
 {
 
 	@Test(dataProvider = "loginDetails",dataProviderClass = CustomDataProvider.class)
-	public void loginToApplication(String uname,String pass)
+	public void loginToApplication(String uname,String pass) 
 	{
 		LoginPage login=new LoginPage(driver);
 		
@@ -20,11 +20,13 @@ public class LoginTest extends BaseClass
 			
 		HomePage home=new HomePage(driver);
 		
-		Assert.assertTrue(home.getWelcomeMsg().contains("Welcome"));
+		Assert.assertTrue(home.getWelcomeMsg().contains("Sign"));
 		
 		home.clickOnSignOut();
 		
 		Assert.assertTrue(login.isSignInPresent());
+		
+	
 		
 	}
 	

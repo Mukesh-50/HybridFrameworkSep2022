@@ -30,7 +30,12 @@ public class LoginPage {
 	
 	public boolean isSignInPresent()
 	{
-		return driver.findElement(loginHeader).isDisplayed();
+		return driver.findElement(login).isDisplayed();
+	}
+	
+	public String getWelcomeMsg1()
+	{
+		return driver.findElement(login).getText();
 	}
 	
 
